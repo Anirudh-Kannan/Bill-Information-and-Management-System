@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">562803640052-k5s6i2l480255q65hqo9ofn0o4qb4qf5.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://bims-c3be9.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">562803640052</string>
+    <string name="google_api_key" translatable="false">AIzaSyCBuwNPvuYmFTcuxfcBun_wtnJ9sFYb2Zg</string>
+    <string name="google_app_id" translatable="false">1:562803640052:android:317aae5cd240579e8f40a1</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCBuwNPvuYmFTcuxfcBun_wtnJ9sFYb2Zg</string>
+    <string name="google_storage_bucket" translatable="false">bims-c3be9.appspot.com</string>
+    <string name="project_id" translatable="false">bims-c3be9</string>
+</resources>

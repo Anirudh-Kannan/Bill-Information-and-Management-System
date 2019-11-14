@@ -1,0 +1,4 @@
+#Thu Nov 14 19:12:00 IST 2019
+base.0=/home/jainil/Downloads/working copy/build/app/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex
