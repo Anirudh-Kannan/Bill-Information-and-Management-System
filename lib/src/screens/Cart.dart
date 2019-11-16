@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:fryo/src/shared/buttons.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../shared/styles.dart';
 import '../shared/colors.dart';
 import '../shared/fryo_icons.dart';
@@ -19,12 +20,19 @@ class Cart extends StatefulWidget {
   _CartState createState() => _CartState();
 }
 Future insertdata() async{
-  String bill_id="105";
+  final prefs = await SharedPreferences.getInstance();
+  final key = 'bill_id';
+  final value_from_shared = prefs.getInt(key) ?? 150;
+  final value_of_bill = value_from_shared;
+  prefs.setInt(key, value_of_bill+1);
+  print('saved $value_of_bill');
+  String bill_id=value_of_bill.toString();
   String store_id="202";
   String total_amount="1001";
   String date="2019-11-01";
   String no_items=(foodcart.length).toString();
-  String cust_id=barcode1.codeUnitAt(0).toString();
+  print("the uid is "+getuid().toString());
+  String cust_id=uid.toString();   //change to barcode string for actual use
   //  Keep the same url
   var url2 = 'https://jainilandroid.000webhostapp.com/insert_bill.php';
 

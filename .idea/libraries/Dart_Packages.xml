@@ -163,6 +163,13 @@
             </list>
           </value>
         </entry>
+        <entry key="shared_preferences">
+          <value>
+            <list>
+              <option value="$USER_HOME$/program/DBMS_app/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-0.4.3/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="sky_engine">
           <value>
             <list>
@@ -257,6 +264,7 @@
       <root url="file://$USER_HOME$/program/DBMS_app/flutter/.pub-cache/hosted/pub.dartlang.org/qr-1.2.0/lib" />
       <root url="file://$USER_HOME$/program/DBMS_app/flutter/.pub-cache/hosted/pub.dartlang.org/qr_flutter-2.1.0+55/lib" />
       <root url="file://$USER_HOME$/program/DBMS_app/flutter/.pub-cache/hosted/pub.dartlang.org/quiver-2.0.5/lib" />
+      <root url="file://$USER_HOME$/program/DBMS_app/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-0.4.3/lib" />
       <root url="file://$USER_HOME$/program/DBMS_app/flutter/.pub-cache/hosted/pub.dartlang.org/smooth_star_rating-1.0.2/lib" />
       <root url="file://$USER_HOME$/program/DBMS_app/flutter/.pub-cache/hosted/pub.dartlang.org/source_span-1.5.5/lib" />
       <root url="file://$USER_HOME$/program/DBMS_app/flutter/.pub-cache/hosted/pub.dartlang.org/stack_trace-1.9.3/lib" />
