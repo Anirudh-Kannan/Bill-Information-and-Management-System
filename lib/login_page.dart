@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'auth.dart';
+import 'package:http/http.dart' as http;
 import 'primary_button.dart';
 import 'src/shared/styles.dart';
 import 'src/shared/colors.dart';
 import 'globals.dart';
-
+String _email;
+String userId;
+String _password;
 class LoginPage extends StatefulWidget {
   LoginPage({Key key, this.title, this.auth, this.onSignIn}) : super(key: key);
 
@@ -25,8 +29,7 @@ enum FormType {
 class _LoginPageState extends State<LoginPage> {
   static final formKey = new GlobalKey<FormState>();
 
-  String _email;
-  String _password;
+
   FormType _formType = FormType.login;
   String _authHint = '';
   List<bool> isSelected;
@@ -45,14 +48,71 @@ class _LoginPageState extends State<LoginPage> {
     }
     return false;
   }
-  
+  Future insertdata(cust_email,cust_id) async{
+
+
+    //  Keep the same url
+    var url2 = 'https://jainilandroid.000webhostapp.com/insert_cust_email.php';
+
+    print("this is a");
+    print(cust_id);
+    http.Response response2 = await http.get(url2);
+    // Insert val
+    /*  http.post(url2,body: {
+      "username":"thi s isthis ia",
+      "password":"password"
+    });*/
+    http.post(url2,body: {
+      "cust_email":  cust_email,
+      "cust_id":cust_id,
+
+    });
+
+    //  To Check for Errors
+
+      print("this si a:");
+    print(response2.body.toString());
+  }
+  Future insertdata1(address,store_id) async{
+
+
+    //  Keep the same url
+    var url2 = 'https://jainilandroid.000webhostapp.com/store_address.php';
+
+    print("this is a");
+    print(store_id);
+    http.Response response2 = await http.get(url2);
+    // Insert val
+    /*  http.post(url2,body: {
+      "username":"thi s isthis ia",
+      "password":"password"
+    });*/
+    http.post(url2,body: {
+      "address":  address,
+      "store_id":store_id,
+
+    });
+
+    //  To Check for Errors
+
+    print("this si a:");
+    print(response2.body.toString());
+  }
   void validateAndSubmit() async {
     if (validateAndSave()) {
       try {
-        String userId = _formType == FormType.login
+         userId = _formType == FormType.login
             ? await widget.auth.signIn(_email, _password)
             : await widget.auth.createUser(_email, _password);
-        setState(() {
+         if(type=="customer") {
+           insertdata(_email, userId);
+         }
+         else
+           {
+             String address="jayanagar main road";
+             insertdata1(address, userId);// The userid is assumed to be store id anirudh check this
+           }
+         setState(() {
           _authHint = 'Signed In\n\nUser id: $userId';
         });
         widget.onSignIn();

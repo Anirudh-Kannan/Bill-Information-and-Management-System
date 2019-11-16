@@ -9,6 +9,7 @@ MERGED from [:firebase_core] /home/jainil/Downloads/working copy/build/firebase_
 MERGED from [com.google.firebase:firebase-core:16.0.9] /home/jainil/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.9.aar/f0cc9bed0aebca0e3c7dace3e0c79587/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-analytics:17.2.0] /home/jainil/.gradle/caches/transforms-1/files-1.1/firebase-analytics-17.2.0.aar/2fbebebcc42adac8dc7f8b677f722210/AndroidManifest.xml:2:1-9:12
 MERGED from [:firebase_auth] /home/jainil/Downloads/working copy/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [:shared_preferences] /home/jainil/Downloads/working copy/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:barcode_scan] /home/jainil/Downloads/working copy/build/barcode_scan/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-17:12
 MERGED from [:path_provider] /home/jainil/Downloads/working copy/build/path_provider/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:firebase_database] /home/jainil/Downloads/working copy/build/firebase_database/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
@@ -191,6 +192,8 @@ MERGED from [com.google.firebase:firebase-analytics:17.2.0] /home/jainil/.gradle
 MERGED from [com.google.firebase:firebase-analytics:17.2.0] /home/jainil/.gradle/caches/transforms-1/files-1.1/firebase-analytics-17.2.0.aar/2fbebebcc42adac8dc7f8b677f722210/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_auth] /home/jainil/Downloads/working copy/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_auth] /home/jainil/Downloads/working copy/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] /home/jainil/Downloads/working copy/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] /home/jainil/Downloads/working copy/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:barcode_scan] /home/jainil/Downloads/working copy/build/barcode_scan/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:barcode_scan] /home/jainil/Downloads/working copy/build/barcode_scan/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:path_provider] /home/jainil/Downloads/working copy/build/path_provider/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44

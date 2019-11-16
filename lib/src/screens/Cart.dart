@@ -20,24 +20,32 @@ class Cart extends StatefulWidget {
   _CartState createState() => _CartState();
 }
 Future insertdata() async{
+
+  //To save the value of the Bill Id for each Customer
   final prefs = await SharedPreferences.getInstance();
   final key = 'bill_id';
   final value_from_shared = prefs.getInt(key) ?? 150;
   final value_of_bill = value_from_shared;
+
   prefs.setInt(key, value_of_bill+1);
+
   print('saved $value_of_bill');
+
   String bill_id=value_of_bill.toString();
-  String store_id="202";
-  String total_amount="1001";
+
+  String store_id=unique_store_id;
+  String total_amount="1001";                                         ////////////////////          Replace This with the Actual Amount
   String date="2019-11-01";
   String no_items=(foodcart.length).toString();
   print("the uid is "+getuid().toString());
-  String cust_id=uid.toString();   //change to barcode string for actual use
+  String customer_id="omv4mNEYN4hM1CS74hNJAcDIvoF3"; //change to barcode string for actual use
   //  Keep the same url
   var url2 = 'https://jainilandroid.000webhostapp.com/insert_bill.php';
 
+  print("store id"+store_id);
 print("this is a");
-print(cust_id);
+print(customer_id);
+print("thi sis  a");
   http.Response response2 = await http.get(url2);
   // Insert val
   /*  http.post(url2,body: {
@@ -50,7 +58,7 @@ print(cust_id);
     "total_amount":total_amount,
     "no_items":no_items,
     "date":date,
-    "cust_id":cust_id
+    "cust_id":customer_id
   });
 
   //  To Check for Errors
