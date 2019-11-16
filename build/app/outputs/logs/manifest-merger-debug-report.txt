@@ -145,7 +145,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/jaini
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.0.1] /home/jainil/.gradle/caches/transforms-1/files-1.1/core-1.0.1.aar/5a95c6dd47140066cd0d858d0178f0b6/AndroidManifest.xml:22:18-86
 	android:label
-		ADDED from /home/jainil/Downloads/working copy/android/app/src/main/AndroidManifest.xml:11:9-33
+		ADDED from /home/jainil/Downloads/working copy/android/app/src/main/AndroidManifest.xml:11:9-30
 	android:icon
 		ADDED from /home/jainil/Downloads/working copy/android/app/src/main/AndroidManifest.xml:12:9-43
 	android:name

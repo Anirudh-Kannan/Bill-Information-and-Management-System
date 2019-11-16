@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'auth.dart';
@@ -71,9 +72,12 @@ class _LoginPageState extends State<LoginPage> {
     //  To Check for Errors
 
       print("this si a:");
+      print("this is to connect");
+      print(cust_id);
+      print(cust_email);
     print(response2.body.toString());
   }
-  Future insertdata1(address,store_id) async{
+  Future insertdata_store(address,store_id) async{
 
 
     //  Keep the same url
@@ -98,6 +102,62 @@ class _LoginPageState extends State<LoginPage> {
     print("this si a:");
     print(response2.body.toString());
   }
+  Future insertdata_customer_payment(cust_id,payment) async{
+
+
+    //  Keep the same url
+    var url2 = 'https://jainilandroid.000webhostapp.com/insert_cust_payment.php';
+
+    print("this is a");
+    print(cust_id);
+    http.Response response2 = await http.get(url2);
+    // Insert val
+    /*  http.post(url2,body: {
+      "username":"thi s isthis ia",
+      "password":"password"
+    });*/
+    http.post(url2,body: {
+      "cust_id":  cust_id,
+      "payment":payment,
+
+    });
+
+    //  To Check for Errors
+
+    print("this si a:");
+    print(cust_id);
+    print(payment);
+    print("payment method");
+    print(response2.body.toString());
+  }
+  Future insertdata_store_payment(store_id,payment) async{
+
+
+    //  Keep the same url
+    var url2 = 'https://jainilandroid.000webhostapp.com/store_payment.php';
+
+    print("this is a");
+    print(store_id);
+    http.Response response2 = await http.get(url2);
+    // Insert val
+    /*  http.post(url2,body: {
+      "username":"thi s isthis ia",
+      "password":"password"
+    });*/
+    http.post(url2,body: {
+      "store_id":  store_id,
+      "payment_method":payment,
+
+    });
+
+    //  To Check for Errors
+
+    print("this si a:");
+    print(store_id);
+    print(payment);
+    print("payment method");
+    print(response2.body.toString());
+  }
   void validateAndSubmit() async {
     if (validateAndSave()) {
       try {
@@ -105,12 +165,15 @@ class _LoginPageState extends State<LoginPage> {
             ? await widget.auth.signIn(_email, _password)
             : await widget.auth.createUser(_email, _password);
          if(type=="customer") {
-           insertdata(_email, userId);
+            await insertdata(_email, userId);   //////////////////// This might be a cause of an error
+
+           insertdata_customer_payment(userId, "cash");
          }
          else
            {
              String address="jayanagar main road";
-             insertdata1(address, userId);// The userid is assumed to be store id anirudh check this
+              await insertdata_store(address, userId);// The userid is assumed to be store id anirudh check this
+               insertdata_store_payment(userId, "cash"); // The userid is assumed to be store id
            }
          setState(() {
           _authHint = 'Signed In\n\nUser id: $userId';
