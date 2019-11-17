@@ -38,7 +38,7 @@ Future insertdata() async{
   String date="2019-11-01";
   String no_items=(foodcart.length).toString();
   print("the uid is "+getuid().toString());
-  String customer_id="omv4mNEYN4hM1CS74hNJAcDIvoF3"; //change to barcode string for actual use
+  String customer_id="x8LqYtdWIlSHnZHJEXaRXyJxC4o1"; //change to barcode string for actual use
   //  Keep the same url
   var url2 = 'https://jainilandroid.000webhostapp.com/insert_bill.php';
 

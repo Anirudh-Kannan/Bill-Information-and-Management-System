@@ -51,14 +51,13 @@ class _CustomerState extends State<Customer> {
   Widget build(BuildContext context) {
     getuid();
     getuid();
-
+process();
     getData();
 
-    process();
     //_loadCurrentUser();
     final _tabs = [
       makeQR(),
-      getbills(),
+      getbills()
     ];
 
 
@@ -138,9 +137,6 @@ class _CustomerState extends State<Customer> {
 
   }
 
-  Set<bill> blist = new Set<bill>();
-  List<bill> flist = new List<bill>();
-  bill b = new bill();
 
   var data;
   void getData() async{
@@ -155,26 +151,32 @@ class _CustomerState extends State<Customer> {
 
   }
 
-  void process()
+  List<bill> process()
   {
+    List<bill> blist = new List<bill>();
+    print("the value is");
+    print(data);
     try{
       for(int i =0; i<data.length; i++)
       {
-        if('1001' == data[i]['cust_id']){
+        bill b = new bill();
+        if(uid == data[i]['cust_id']){
           b.bill_id = data[i]['bill_id'];
           b.date = data[i]['date'];
           b.amount = data[i]['total_amount'];
           b.items = data[i]['no_items'];
           b.store_id = data[i]['store_id'];
           b.cust_id = data[i]['cust_id'];
-
-          blist.add(b);
           print(b.cust_id);
+          print(b.amount);
+          blist.add(b);
+          print(i);
+          print(blist.length.toString());
+
         }}}
     catch(e)
     {}
-
-
+return blist;
   }
 
   Widget getCard(String bill_id,String date, String items, String amount) {
@@ -207,27 +209,36 @@ class _CustomerState extends State<Customer> {
 
   Widget getbills()
   {
-    for(int i =0; i<blist.length;i++)
-    {
-      flist.add(blist.first);
-      blist.remove(blist.first);
+    List<bill> blist = new List<bill>();
+    List<bill> flist = new List<bill>();
+    blist=process();
+    if(blist!=null) {
+      for (int i = 0; i < blist.length; i++) {
+        flist.add(blist[i]);
+        print(blist[0].amount.toString());
+      }
+    }
+    print("the list is");
+    print(flist);
+    if(flist == null){
+      return new Container(width: 10.0,height:  10.0);
+    }else {
+      return Container(child: ListView.builder(
+        // Let the ListView know how many items it needs to build.
+          itemCount: flist.length,
+
+          // Provide a builder function. This is where the magic happens.
+          // Convert each item into a widget based on the type of item it is.
+          itemBuilder: (context, index) {
+            print(index.toString());
+            return getCard(
+                flist[index].cust_id, flist[index].date, flist[index].items,
+                flist[index].amount);
+          }
+
+      ),);
+    }
     }
 
-    print(flist);
-    return Container(child:ListView.builder(
-      // Let the ListView know how many items it needs to build.
-        itemCount: flist.length,
-
-        // Provide a builder function. This is where the magic happens.
-        // Convert each item into a widget based on the type of item it is.
-        itemBuilder: (context, index) {
-          return getCard(flist[index].cust_id,flist[index].date,flist[index].items,flist[index].amount);
-
-        }
-
-    ),);
-
-
-  }
 
 }
