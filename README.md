@@ -3,12 +3,12 @@ An e-billing system is used by companies to provide a facile interface for their
 
 
 
-| 3|
+| 1|
 |-------|
 |<img src="screenshots/4.png" width="300">|
 
 
-| 4 | 5|
+| 2 | 3|
 |------|-------|
 |<img src="screenshots/5.png" width="300">|<img src="screenshots/6.png" width="300">|
 
