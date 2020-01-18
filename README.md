@@ -12,10 +12,15 @@ An e-billing system is used by companies to provide a facile interface for their
 |------|-------|
 |<img src="screenshots/5.png" width="300">|<img src="screenshots/6.png" width="300">|
 
+Software Engineering Diagrams can be found here:
+
+https://drive.google.com/open?id=1o10xUJa_yVBtX23ShC3v1n_m-AKN42XO
+
+
+
 ER-Diagram
 Database tables 
-and other info can be found here:
+and other info can be found in the report here:
 https://drive.google.com/open?id=137E1OgJzuBQVdcmaKcQxg4fALB75bAOU43OK9kqvYBc
-
 
 
