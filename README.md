@@ -1,20 +1,21 @@
 
-# 📸 Screenshots
-The screenshots below are taken on a android emulator.
-
-| 1 | 2|
-|------|-------|
-|<img src="./screenshots/1.png" width="300">|<img src="screenshots/2.png" width="300">|
-
-| 3 | 4|
-|------|-------|
-|<img src="screenshots/3.png" width="300">|<img src="screenshots/4.png" width="300">|
+An e-billing system is used by companies to provide a facile interface for their clients and customers to pay bills. This system collects information from a client and facilitates payment. Problems with existing systems include their inability to modify data effectively and efficiently, lack of user-friendly interface for retrieval and storing of data, difficulty in generating reports, and high dependence on paper records which can be risky. The ‘Bill Information and Management System’ (BiMS) app aims to provide a solution to billing software that deals with these problems.
 
 
-| 5 | 6|
+
+| 3|
+|-------|
+|<img src="screenshots/4.png" width="300">|
+
+
+| 4 | 5|
 |------|-------|
 |<img src="screenshots/5.png" width="300">|<img src="screenshots/6.png" width="300">|
 
+ER-Diagram
+Database tables 
+and other info can be found here:
+https://drive.google.com/open?id=137E1OgJzuBQVdcmaKcQxg4fALB75bAOU43OK9kqvYBc
 
 
 
