@@ -4,14 +4,11 @@ An e-billing system is used by companies to provide a facile interface for their
 
 
 
-| 1|
-|-------|
-|<img src="screenshots/4.png" width="300">|
-
-
-| 2 | 3|
+| 1 | 2|
 |------|-------|
-|<img src="screenshots/5.png" width="300">|<img src="screenshots/6.png" width="300">|
+|<img src="images/bims screenshots/01.jpg" width="300">|<img src="images/bims screenshots/02.jpg" width="300">|
+
+
 
 ### Software Engineering Diagrams:
 
