@@ -1,4 +1,4 @@
-# Bill Information and Management System
+# E Commerce App
 
 An e-billing system is used by companies to provide a facile interface for their clients and customers to pay bills. This system collects information from a client and facilitates payment. Problems with existing systems include their inability to modify data effectively and efficiently, lack of user-friendly interface for retrieval and storing of data, difficulty in generating reports, and high dependence on paper records which can be risky. The ‘Bill Information and Management System’ (BiMS) is a flutter based mobile app which aims to provide a QR code based solution to billing software.
 
